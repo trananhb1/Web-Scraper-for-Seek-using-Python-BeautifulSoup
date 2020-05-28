@@ -25,5 +25,5 @@ while(loop):
     jobs = jobs.append(job_objs, ignore_index = True)
     # print(jobs)
 
-jobs.to_csv('file_name.csv', index=False)
+jobs.to_csv('listjob.csv', index=False)
 
