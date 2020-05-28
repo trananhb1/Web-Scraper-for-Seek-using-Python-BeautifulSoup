@@ -13,7 +13,7 @@ while(loop):
     i += 1
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'html.parser')
-    job_elems = soup.find_all('article', class_ = '_2m3Is-x _3KQ6cQG')
+    job_elems = soup.find_all('article', class_ = '_2m3Is-x') 
     if len(job_elems) == 0:
         print('No more job')
         loop = False
@@ -24,5 +24,6 @@ while(loop):
     # print(job_objs)
     jobs = jobs.append(job_objs, ignore_index = True)
     # print(jobs)
-print(jobs)
+
+jobs.to_csv('file_name.csv', index=False)
 
